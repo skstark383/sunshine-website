@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sunshine Educational Centre</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+
+<header>
+<h1>Sunshine Educational Centre</h1>
+<p>Online Classes for 5th - 10th</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="courses.html">Courses</a>
+<a href="contact.html">Contact</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+<section>
+<h2>Welcome</h2>
+<p>Structured online education with regular tests and doubt clearing sessions.</p>
+
+<h3 id="displayNotice"></h3>
+
+<button class="btn" onclick="payNow()">Pay Admission Fee</button>
+</section>
+
+<script>
+function payNow() {
+var options = {
+    "key": "YOUR_RAZORPAY_KEY",
+    "amount": "50000",
+    "currency": "INR",
+    "name": "Sunshine Educational Centre",
+    "description": "Admission Fee",
+    "handler": function (response){
+        alert("Payment Successful!");
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.open();
+}
+</script>
+
+<footer>
+© 2026 Sunshine Educational Centre
+</footer>
+
+</body>
+</html>

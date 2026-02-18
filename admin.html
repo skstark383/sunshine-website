@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+</head>
+<body>
+
+<header><h1>Admin Panel</h1></header>
+
+<section>
+<h3>Login</h3>
+<input type="text" id="adminUser" placeholder="Username">
+<input type="password" id="adminPass" placeholder="Password">
+<button class="btn" onclick="loginAdmin()">Login</button>
+
+<div id="adminPanel" style="display:none;">
+<h3>Post Notice</h3>
+<textarea id="noticeText"></textarea>
+<button class="btn" onclick="saveNotice()">Save Notice</button>
+</div>
+</section>
+
+</body>
+</html>
